@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metryczka</title>
+</head>
+
+<style>
+    #ramka{
+        height: 400px;
+        width:1000px;
+        border: 2px solid black;
+        padding-left: 10px;
+    }
+
+    .dane1tab{
+        width: 650px;
+        height: 30px;
+    }
+
+    #numer{
+        width: 30px;
+        text-align: center;
+    }
+
+    .strzaly{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+
+    #uwagi{
+        width: 142px;
+        text-align: center;
+    }
+
+    #odstep1{
+        width: 225px;
+        border: none;
+    }
+
+    .dane2tab{
+        width:200px;
+        height: 25px;
+    }
+
+    #broniammo{
+        width: 100px; 
+        text-align: center;
+    }
+
+    .dane3tab{
+        width:300px;
+    }
+
+    #odstep2{
+        width: 137px;
+        border: none;
+    }
+
+    #rodo{
+        width:15px;
+        height: 15px;
+    }
+
+    .bezramek{
+        border:none;
+    }
+
+    #odstep0{
+        width: 20px;
+        border: none;
+    }
+
+    .margtop{
+        border: none;
+        height: 10px;
+    }
+
+    #duzytab{
+        border-collapse: collapse;
+    }
+    
+    table{
+        margin-top: 5px;
+    }
+
+</style>
+
+
+<body>
+    
+    <div id="ramka">
+        <table BORDER>
+            <tr>
+                <td id="numer">1</td>
+                <td id="odstep0"></td>
+                <td class="bezramek">IMIE</td>
+                <td class="dane1tab"></td>
+            </tr>
+
+            <tr>
+                <td class="bezramek"></td>
+                <td id="odstep0"></td>
+                <td class="bezramek">NAZWISKO</td>
+                <td class="dane1tab"></td>
+            </tr>
+        </table>
+
+        <table BORDER>
+            <tr class="margtop"></tr>
+            <tr>
+                <td class="bezramek">Klub</td>
+                <td class="dane2tab"></td>
+                <td id="odstep1"></td>
+                <td class="bezramek">Data</td>
+                <td class="dane2tab"></td>
+            </tr>
+            <tr class="margtop"></tr>
+        </table>
+
+        <table id="duzytab" BORDER>
+            <tr>
+                <td>Stanowisko</td>
+                <td id="broniammo">Broń</td>
+                <td id="broniammo">Amunicja</td>
+                <td>Konkurencja</td>
+                <td class="strzaly">1</td>
+                <td class="strzaly">2</td>
+                <td class="strzaly">3</td>
+                <td class="strzaly">4</td>
+                <td class="strzaly">5</td>
+                <td class="strzaly">6</td>
+                <td class="strzaly">7</td>
+                <td class="strzaly">8</td>
+                <td class="strzaly">9</td>
+                <td class="strzaly">10</td>
+                <td id="uwagi">Uwagi</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td id="bron"></td>
+                <td></td>
+                <td></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td rowspan="3"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td id="bron"></td>
+                <td></td>
+                <td></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td id="bron"></td>
+                <td></td>
+                <td></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+            </tr>
+        </table>
+
+        <table BORDER>
+            <tr class="margtop"></tr>
+            <tr>
+                <td class="bezramek">Podpis zawodnika</td>
+                <td class="dane2tab"></td>
+                <td id="odstep2"></td>
+                <td class="bezramek">Podpis sędziego</td>
+                <td class="dane2tab"></td>
+            </tr>
+            <tr class="margtop"></tr>
+        </table>
+
+        <table BORDER>
+            <tr>
+                <td id="rodo"></td>
+                <td class="bezramek">Oświadczam, że zapoznałem się z warunkami RODO i je akceptuje czy coś</td>
+                
+            </tr>
+        </table>
+
+    </div>
+   
+</body>
+</html>

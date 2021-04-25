@@ -1,0 +1,14 @@
+p {
+    font-weight: bold;
+}
+input {
+    border-radius: 15%;
+}
+#form {
+    width: max-content;
+    height: 60vh;
+    margin: auto;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 5%;
+}

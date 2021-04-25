@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form method="POST" id="form" action="metryczka.php">
+    <p>Podaj imię i nazwisko: </p>
+    <input type="text" name="dane" id="dane"><br>
+    <p>Podaj klub:</p>
+    <input type="text" name="klub" id="klub"><br>
+    <hr>
+    <p>Wybierz konkurencje:</p>
+    <input type="checkbox" name="ksp">
+    <label for="ksp">Karabin sportowy</label><br>
+
+    <input type="checkbox" name="kcz">
+    <label for="kcz">Karabin centralnego zapłonu</label><br>
+
+    <input type="checkbox" name="kczOP">
+    <label for="kczOP">Karabin centralnego zapłonu OPEN</label><br>
+
+    <input type="checkbox" name="optyka">
+    <label for="optyka">Optyka</label><br>
+
+    <input type="checkbox" name="psp">
+    <label for="psp">Pistolet sportowy</label><br>
+
+    <input type="checkbox" name="pcz">
+    <label for="pcz">Pistolet centralnego zapłonu</label><br>
+
+    <input type="checkbox" name="strzST">
+    <label for="strzST">Strzelba STANDARD</label><br>
+
+    <input type="checkbox" name="strzOP">
+    <label for="strzOP">Strzelba OPEN</label><br>
+    <hr>
+    <p>Akceptuje RODO: </p>
+    <input type="checkbox" name="rodo"> TAK
+    <hr>
+    <input type="submit" value="Generuj">
+</form>
+</body>
+</html>
