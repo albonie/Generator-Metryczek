@@ -3,43 +3,58 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function  limiter(j) {
+            var licznik = 0;
+            for (let i = 0; i < 8; i++) {
+                if (document.getElementsByClassName("konkur")[i].checked) {
+                    licznik++;
+                }             
+            }
+            if (licznik > 4) document.getElementsByClassName("konkur")[j].checked = false;
+            return false;
+        }
+    </script>
 </head>
 <body>
-<form method="POST" id="form" action="metryczka.php">
+<form method="POST" class="form" name="form" id="form" action="metryczka.php">
     <p>Podaj imię i nazwisko: </p>
     <input type="text" name="dane" id="dane"><br>
     <p>Podaj klub:</p>
     <input type="text" name="klub" id="klub"><br>
     <hr>
     <p>Wybierz konkurencje:</p>
-    <input type="checkbox" name="ksp">
+    <input type="checkbox" class="konkur" name="ksp" onclick="limiter(0)" id="konkur">
     <label for="ksp">Karabin sportowy</label><br>
 
-    <input type="checkbox" name="kcz">
+    <input type="checkbox" class="konkur" name="kcz" onclick="limiter(1)" id="konkur">
     <label for="kcz">Karabin centralnego zapłonu</label><br>
 
-    <input type="checkbox" name="kczOP">
+    <input type="checkbox" class="konkur" name="kczOPr" onclick="limiter(2)" id="konkur">
     <label for="kczOP">Karabin centralnego zapłonu OPEN</label><br>
 
-    <input type="checkbox" name="optyka">
+    <input type="checkbox" class="konkur" name="optyka" onclick="limiter(3)" id="konkur">
     <label for="optyka">Optyka</label><br>
 
-    <input type="checkbox" name="psp">
+    <input type="checkbox" class="konkur" name="psp" onclick="limiter(4)" id="konkur">
     <label for="psp">Pistolet sportowy</label><br>
 
-    <input type="checkbox" name="pcz">
+    <input type="checkbox" class="konkur" name="pcz" onclick="limiter(5)" id="konkur">
     <label for="pcz">Pistolet centralnego zapłonu</label><br>
 
-    <input type="checkbox" name="strzST">
+    <input type="checkbox" class="konkur" name="strzST" onclick="limiter(6)" id="konkur">
     <label for="strzST">Strzelba STANDARD</label><br>
 
-    <input type="checkbox" name="strzOP">
+    <input type="checkbox" class="konkur" name="strzOP" onclick="limiter(7)" id="konkur">
     <label for="strzOP">Strzelba OPEN</label><br>
     <hr>
     <p>Akceptuje RODO: d00pa</p>
     <input type="checkbox" name="rodo"> TAK
     <hr>
     <input type="submit" value="Generuj">
+    
 </form>
+
 </body>
 </html>
+
