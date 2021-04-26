@@ -7,7 +7,10 @@
     <title>Metryczka</title>
 </head>
 <?php
-error_reporting(0);
+//error_reporting(0);
+
+static $numer = 0;
+
 if (isset($_POST)) {
     if (isset($_POST["rodo"])) {
         $dane = $_POST["dane"];
@@ -38,10 +41,38 @@ if (isset($_POST)) {
         if (isset($_POST["strzST"])) {
             array_push($konkurencje, "Strzelba STANDARD");
         }
+        $zaznaczone = sizeof($konkurencje);
     }
     else {
         header("Location: form.html");
     }
+}
+
+function printKomorka($znak) {
+    echo "
+    <td id='bron'>
+                    <div id='polowa1'>$znak</div>
+                    <div id='polowa2'>$znak</div>
+                </td>
+                <td id='bron'>
+                    <div id='polowa1'>$znak</div>
+                    <div id='polowa2'>$znak</div>
+                </td>
+                <td class='konk'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='strzaly'>$znak</td>
+                <td class='konk'>$znak</td>
+                
+    ";
 }
 ?>
 <style>
@@ -180,6 +211,7 @@ if (isset($_POST)) {
         height:40px;
         width: 50%;
         box-sizing: border-box;
+        text-align: center;
     }
     #polowa1 {
         border-right: 1px solid black;
@@ -202,6 +234,10 @@ if (isset($_POST)) {
         box-sizing: border-box;
     }
 
+    .konk {
+        text-align: center;
+    }
+
 </style>
 
 
@@ -212,7 +248,11 @@ if (isset($_POST)) {
         
         <table >
             <tr>
-                <td id="numer">000</td>
+                <td id="numer">
+                    <?php
+                        echo ++$numer;
+                    ?>
+                </td>
                 <td id="tytul" class="bezramek" colspan="3"><h2>KSS LOK REGALICA GRYFINO</h2></td>
             </tr>
             <tr>
@@ -295,12 +335,20 @@ if (isset($_POST)) {
             </tr>
 
             <tr>
-                <td>
+                
                     <?php
-                    if ($konkurencje[0] != null)
-                        echo $konkurencje[0];
+                    if ($zaznaczone >= 1) {
+                        echo "<td class = 'konk'>$konkurencje[0]</td>";
+                        printKomorka("");
+                    }
+                    else {
+                        echo "<td class='konk'></td>";
+                        printKomorka("-");
+                        
+                    }
                     ?>
-                </td>
+                    <td rowspan='4'></td>
+                <!-- 
                 <td id="bron">
                     <div id="polowa1"></div>
                     <div id="polowa2"></div>
@@ -322,18 +370,22 @@ if (isset($_POST)) {
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td></td>
-                <td rowspan="4"></td>
+                <td rowspan="4"></td> -->
                
             </tr>
 
             <tr>
-                <td>
-                <?php
-                    if ($konkurencje[1] != null)
-                        echo $konkurencje[1];
+            <?php
+                    if ($zaznaczone >= 2) {
+                        echo "<td class = 'konk'>$konkurencje[1]</td>";
+                        printKomorka("");
+                    }
+                    else {
+                        echo "<td class='konk'></td>";
+                        printKomorka("-");
+                    }
                     ?>
-                </td>
-                <td id="bron">
+                <!-- <td id="bron">
                     <div id="polowa1"></div>
                     <div id="polowa2"></div>
                 </td>
@@ -353,17 +405,21 @@ if (isset($_POST)) {
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
-                <td></td>
+                <td></td> -->
             </tr>
 
             <tr>
-                <td>
-                <?php
-                    if ($konkurencje[2])
-                        echo $konkurencje[2];
+            <?php
+                    if ($zaznaczone >= 3) {
+                        echo "<td class = 'konk'>$konkurencje[2]</td>";
+                        printKomorka("");
+                    }
+                    else {
+                        echo "<td class='konk'></td>";
+                        printKomorka("-");
+                    }
                     ?>
-                </td>
-                <td id="bron">
+                <!-- <td id="bron">
                     <div id="polowa1"></div>
                     <div id="polowa2"></div>
                 </td>
@@ -383,17 +439,21 @@ if (isset($_POST)) {
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
-                <td></td>
+                <td></td> -->
             </tr>
 
             <tr>
-                <td>
-                <?php
-                    if ($konkurencje[3])
-                        echo $konkurencje[3];
+            <?php
+                    if ($zaznaczone >= 4) {
+                        echo "<td class = 'konk'>$konkurencje[3]</td>";
+                        printKomorka("");
+                    }
+                    else {
+                        echo "<td class='konk'></td>";
+                        printKomorka("-");
+                    }
                     ?>
-                </td>
-                <td id="bron">
+                <!-- <td id="bron">
                     <div id="polowa1"></div>
                     <div id="polowa2"></div>
                 </td>
@@ -413,7 +473,7 @@ if (isset($_POST)) {
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
-                <td></td>
+                <td></td> -->
             </tr>
         </table>
 
