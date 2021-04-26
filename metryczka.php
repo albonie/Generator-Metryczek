@@ -21,7 +21,7 @@ if (isset($_POST)) {
             array_push($konkurencje, "Ksp");
         }
         if (isset($_POST["kcz"])) {
-            array($konkurencje, "Kcz");
+            array_push($konkurencje, "Kcz");
         }
         if (isset($_POST["kczOP"])) {
             array_push($konkurencje, "Kcz OPEN");
