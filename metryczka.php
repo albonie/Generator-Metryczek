@@ -13,9 +13,15 @@ static $numer = 0;      // statyczny numer zawodnika
 
 if (isset($_POST)) {
     if (isset($_POST["rodo"])) {    // sprawdza czy rodo jest zaznaczone
-        $dane = $_POST["dane"];
+        if ($_POST["dane"] != null)
+            $dane = $_POST["dane"];
+        else 
+            $dane = "BŁĄD BŁĄD";
         $imie = explode(" ", $dane);
-        $klub = $_POST["klub"];
+        if ($_POST["klub"] != null)
+            $klub = $_POST["klub"];
+        else
+            $klub = "NIE PODANO KLUBU";
         $konkurencje = [];
         if (isset($_POST["ksp"])) {
             array_push($konkurencje, "Ksp");
@@ -238,6 +244,13 @@ function printKomorka($znak) {
         text-align: center;
     }
 
+    #rodo {
+        background-image: url("ptaszor.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;      
+    }
+
 </style>
 
 
@@ -271,7 +284,10 @@ function printKomorka($znak) {
                 <td class="bezramek">NAZWISKO</td>
                 <td class="dane1tab">
                     <?php
+                    if (sizeof($imie) > 1)
                         echo $imie[1];
+                    else 
+                        echo "BŁĄD"
                     ?>
                 </td>
             </tr>
