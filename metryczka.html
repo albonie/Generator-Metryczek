@@ -12,7 +12,7 @@
         border: 1px solid black;
     }
     #ramka{
-        height: 500px;
+        height: 550px;
         width:1000px;
         border: 2px solid black;
         padding-left: 10px;
@@ -20,12 +20,13 @@
     }
 
     .dane1tab{
-        width: 650px;
+        width: 847px;
         height: 30px;
     }
 
     #numer{
-        width: 30px;
+        width: 80px;
+        height: 80px;
         text-align: center;
     }
 
@@ -46,7 +47,7 @@
     }
 
     .dane2tab{
-        width:200px;
+        width:231px;
         height: 25px;
     }
 
@@ -148,6 +149,16 @@
         padding: 0;
         box-sizing: border-box;
     }
+    
+    #tytul {
+        text-align: center;
+    }
+
+    #rodoTekst {
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
 </style>
 
 
@@ -155,19 +166,21 @@
     
     <div id="ramka">
 
-        <h2>KSS LOK REGALICA GRYFINO</h2>
-
+        
         <table >
             <tr>
-                <td id="numer">1</td>
-                <td id="odstep0"></td>
+                <td id="numer">000</td>
+                <td id="tytul" class="bezramek" colspan="3"><h2>KSS LOK REGALICA GRYFINO</h2></td>
+            </tr>
+            <tr>
+                
+                
                 <td class="bezramek">IMIE</td>
                 <td class="dane1tab"></td>
             </tr>
 
             <tr>
-                <td class="bezramek"></td>
-                <td id="odstep0"></td>
+                
                 <td class="bezramek">NAZWISKO</td>
                 <td class="dane1tab"></td>
             </tr>
@@ -187,7 +200,8 @@
 
         <table id="duzytab">
             <tr>
-                <td>Stanowisko</td>
+                <td>Konkurencja</td>
+                
                 <td id="broniammo">
                     <div class="div">Broń</div>
 
@@ -205,7 +219,7 @@
                         <div id="div3">Klubowa</div>
                     </div>
                 </td>
-                <td>Konkurencja</td>
+                <td>Stanowisko</td>
                 <td class="strzaly">1</td>
                 <td class="strzaly">2</td>
                 <td class="strzaly">3</td>
@@ -333,9 +347,16 @@
 
         <table >
             <tr>
+                <td class="bezramek"></td>
+                <td class="bezramek" rowspan="3" id="rodoTekst">Po zapoznaniu się z regulaminem zawodów wyrażam zgodę na przetwarzanie moich danych osobowych podanych przeze mnie zgodnie <br>
+                    z art. 6 ust. 1 lit. a. Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016r. w sprawie ochrony osób <br>
+                     fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych w związku z udziałem w zawodach.</td>
+            </tr>
+            <tr>        
                 <td id="rodo"></td>
-                <td class="bezramek">Oświadczam, że zapoznałem się z warunkami RODO i je akceptuje czy coś</td>
-                
+            </tr>
+            <tr>
+                <td class="bezramek"></td>
             </tr>
         </table>
 
