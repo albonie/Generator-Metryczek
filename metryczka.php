@@ -9,10 +9,10 @@
 <?php
 //error_reporting(0);
 
-static $numer = 0;
+static $numer = 0;      // statyczny numer zawodnika
 
 if (isset($_POST)) {
-    if (isset($_POST["rodo"])) {
+    if (isset($_POST["rodo"])) {    // sprawdza czy rodo jest zaznaczone
         $dane = $_POST["dane"];
         $imie = explode(" ", $dane);
         $klub = $_POST["klub"];
@@ -41,14 +41,14 @@ if (isset($_POST)) {
         if (isset($_POST["strzST"])) {
             array_push($konkurencje, "Strzelba STANDARD");
         }
-        $zaznaczone = sizeof($konkurencje);
+        $zaznaczone = sizeof($konkurencje);     //  ile pol jest zaznaczonych
     }
     else {
-        header("Location: form.html");
+        header("Location: form.html");      // jesli rodo nie jest zaznaczone to wraca do formularza
     }
 }
 
-function printKomorka($znak) {
+function printKomorka($znak) {     
     echo "
     <td id='bron'>
                     <div id='polowa1'>$znak</div>
