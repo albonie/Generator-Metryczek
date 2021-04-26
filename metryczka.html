@@ -12,10 +12,11 @@
         border: 1px solid black;
     }
     #ramka{
-        height: 450px;
+        height: 500px;
         width:1000px;
         border: 2px solid black;
         padding-left: 10px;
+        margin: auto;
     }
 
     .dane1tab{
@@ -49,9 +50,16 @@
         height: 25px;
     }
 
+    .dane0tab{
+        width:400px;
+        height: 25px;
+    }
+
     #broniammo{
         width: 100px; 
         text-align: center;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .dane3tab{
@@ -100,8 +108,46 @@
         text-align: center;
     }
 
+    .div {
+        width: 100%;
+        height: 20px;
+        margin: 0;
+        box-sizing:border-box;
+    }
 
+    #div2, #div3 {
+        width: 50%;
+        height: 100%;
+        font-size: xx-small;
+        border-top: 1px solid black;
+        padding-top: 4%;
+    }
+    #div2 {
+        float: left;
+        border-right: 1px solid black;
+        box-sizing:border-box;
+    }
+    #div3 {
+        float: right;
+        box-sizing:border-box;
+    }
 
+    #polowa1, #polowa2 {
+        height:33px;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    #polowa1 {
+        border-right: 1px solid black;
+        float: left;
+    }
+    #polowa2 {
+        float: right;
+    }
+    #bron {
+        padding: 0;
+        box-sizing: border-box;
+    }
 </style>
 
 
@@ -131,7 +177,7 @@
             <tr class="margtop"></tr>
             <tr>
                 <td class="bezramek">Klub</td>
-                <td class="dane2tab"></td>
+                <td class="dane0tab"></td>
                 <td id="odstep1"></td>
                 <td class="bezramek">Data</td>
                 <td class="dane2tab"></td>
@@ -142,8 +188,23 @@
         <table id="duzytab">
             <tr>
                 <td>Stanowisko</td>
-                <td id="broniammo"></td>
-                <td id="broniammo">Amunicja</td>
+                <td id="broniammo">
+                    <div class="div">Broń</div>
+
+                    <div class="div">
+                        <div id="div2">Własna</div>
+                        <div id="div3">Klubowa</div>
+                    </div>
+
+                </td>
+                <td id="broniammo">
+                    <div class="div">Amunicja</div>
+
+                    <div class="div">
+                        <div id="div2">Własna</div>
+                        <div id="div3">Klubowa</div>
+                    </div>
+                </td>
                 <td>Konkurencja</td>
                 <td class="strzaly">1</td>
                 <td class="strzaly">2</td>
@@ -161,9 +222,15 @@
 
             <tr>
                 <td></td>
-                <td id="bron"></td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
                 <td></td>
-                <td></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
@@ -175,14 +242,20 @@
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
                 <td></td>
-                <td rowspan="3"></td>
+                <td rowspan="4"></td>
                
             </tr>
 
             <tr>
                 <td></td>
-                <td id="bron"></td>
-                <td></td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
                 <td></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
@@ -199,8 +272,38 @@
 
             <tr>
                 <td></td>
-                <td id="bron"></td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
                 <td></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td class="strzaly"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
+                <td id="bron">
+                    <div id="polowa1"></div>
+                    <div id="polowa2"></div>
+                </td>
                 <td></td>
                 <td class="strzaly"></td>
                 <td class="strzaly"></td>
