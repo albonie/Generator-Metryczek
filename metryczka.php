@@ -334,8 +334,7 @@ function printKomorka($znak) {
                 <td id="uwagi">Uwagi</td>
             </tr>
 
-            <tr>
-                
+            <tr>        
                     <?php
                     if ($zaznaczone >= 1) {
                         echo "<td class = 'konk'>$konkurencje[0]</td>";
@@ -347,31 +346,7 @@ function printKomorka($znak) {
                         
                     }
                     ?>
-                    <td rowspan='4'></td>
-                <!-- 
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td></td>
-                <td rowspan="4"></td> -->
-               
+                    <td rowspan='4'></td>             
             </tr>
 
             <tr>
@@ -384,28 +359,7 @@ function printKomorka($znak) {
                         echo "<td class='konk'></td>";
                         printKomorka("-");
                     }
-                    ?>
-                <!-- <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td></td> -->
+                    ?>            
             </tr>
 
             <tr>
@@ -419,28 +373,7 @@ function printKomorka($znak) {
                         printKomorka("-");
                     }
                     ?>
-                <!-- <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td></td> -->
-            </tr>
+               
 
             <tr>
             <?php
@@ -453,27 +386,6 @@ function printKomorka($znak) {
                         printKomorka("-");
                     }
                     ?>
-                <!-- <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
-                </td>
-                <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td></td> -->
             </tr>
         </table>
 
