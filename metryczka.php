@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metryczka</title>
+    <script src="pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 <?php
 //error_reporting(0);
@@ -433,7 +435,7 @@ function printKomorka($znak) {
         </table>
 
     </div>
-   
+   <button id="download"> download pdf</button>
 </body>
 </html>
 
