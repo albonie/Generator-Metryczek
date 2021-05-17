@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Metryczka</title>
     
 </head>
@@ -32,8 +32,8 @@
     }
 
     .strzaly, div{
-        width: 7mm;
-        height: 7mm;
+        width: 6mm;
+        height: 6mm;
         text-align: center;
         font-size: 3mm;
     }
@@ -108,33 +108,36 @@
     }
 
     .div {
-        width: 100%;
+        width: 18mm;
         height: 4mm;
         margin: 0;
         box-sizing:border-box;
+        padding: 0;
     }
 
     #div2, #div3 {
-        width: 50%;
-        height: 100%;
+        box-sizing:border-box;
+        height: 4mm;
         font-size: xx-small;
         border-top: 1px solid black;
-        padding-top: 4%;
+        padding-top: 1mm;
         font-size: 2mm;
     }
     #div2 {
+        width: 9mm;
         float: left;
         border-right: 1px solid black;
         box-sizing:border-box;
     }
     #div3 {
+        width: 9mm;
         float: right;
         box-sizing:border-box;
     }
 
     #polowa1, #polowa2 {
         height: 7mm;
-        width: 50%;
+        width: 9mm;
         box-sizing: border-box;
     }
     #polowa1 {
@@ -145,6 +148,8 @@
         float: right;
     }
     #bron {
+        width: 18mm; 
+        text-align: center;
         padding: 0;
         box-sizing: border-box;
     }
@@ -162,210 +167,300 @@
     body{
         font-size: xx-small;
     }
+    #brontab {
+        margin-top: 0;
+        border: 0;
+        border-collapse: collapse;
+        height: 8mm;
+        width: 18mm;    
+        table-layout: fixed;
+    }
+    #gora {
+        height: 4mm;
+        width: 18mm;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        font-size: x-small;
+    }
+    #dol1 {
+        border-left: none;
+    }
+    #dol2 {
+        border-right: none;
+    }
+    #dol1, #dol2 {
+        width: 9mm;
+        height: 4mm;
+        border-bottom: none;
+        box-sizing: border-box;
+        font-size: 2mm;
+        padding: 0;
+    }
+    #zaznaczanie {
+        margin: 0;
+        border: 0;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+    #lewy, #prawy {
+        width: 9mm;
+        height: 7mm;
+        border-top: none;
+        border-bottom: none;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    #lewy {
+        border-left: none;
+    }
+    #prawy {
+        border-right: none;
+    }
 
 </style>
 
 
 <body>
     
-    <div id="ramka">
+    <div id='ramka'>
 
         
         <table >
             <tr>
-                <td id="numer">000</td>
-                <td id="tytul" class="bezramek" colspan="3"><h2>KSS LOK REGALICA GRYFINO</h2></td>
+                <td id='numer'>000</td>
+                <td id='tytul' class='bezramek' colspan='3'><h2>KSS LOK REGALICA GRYFINO</h2></td>
             </tr>
             <tr>
                 
                 
-                <td class="bezramek">IMIE</td>
-                <td class="dane1tab"></td>
+                <td class='bezramek'>IMIE</td>
+                <td class='dane1tab'></td>
             </tr>
 
             <tr>
                 
-                <td class="bezramek">NAZWISKO</td>
-                <td class="dane1tab"></td>
+                <td class='bezramek'>NAZWISKO</td>
+                <td class='dane1tab'></td>
             </tr>
         </table>
 
         <table>
-            <tr class="margtop"></tr>
+            <tr class='margtop'></tr>
             <tr>
-                <td class="bezramek">Klub</td>
-                <td class="dane0tab"></td>
-                <td id="odstep1"></td>
-                <td class="bezramek">Data</td>
-                <td class="dane2tab"></td>
+                <td class='bezramek'>Klub</td>
+                <td class='dane0tab'></td>
+                <td id='odstep1'></td>
+                <td class='bezramek'>Data</td>
+                <td class='dane2tab'></td>
             </tr>
-            <tr class="margtop"></tr>
+            <tr class='margtop'></tr>
         </table>
 
-        <table id="duzytab">
+        <table id='duzytab'>
             <tr>
                 <td>Konkurencja</td>
                 
-                <td id="broniammo">
-                    <div class="div">Broń</div>
-
-                    <div class="div">
-                        <div id="div2">Własna</div>
-                        <div id="div3">Klubowa</div>
+                <td id='broniammo'>
+                    <table id="brontab">
+                        <tr>
+                            <td id="gora" colspan="2">Broń</td>
+                        </tr>
+                        <tr>
+                            <td id="dol1">Własna</td>
+                            <td id="dol2">Klubowa</td>
+                        </tr>
+                    </table>
                     </div>
 
                 </td>
-                <td id="broniammo">
-                    <div class="div">Amunicja</div>
-
-                    <div class="div">
-                        <div id="div2">Własna</div>
-                        <div id="div3">Klubowa</div>
-                    </div>
+                <td id='broniammo'>
+                    <table id="brontab">
+                        <tr>
+                            <td id="gora" colspan="2">Amunicja</td>
+                        </tr>
+                        <tr>
+                            <td id="dol1">Własna</td>
+                            <td id="dol2">Klubowa</td>
+                        </tr>
+                    </table>
                 </td>
                 <td>Stanowisko</td>
-                <td class="strzaly">1</td>
-                <td class="strzaly">2</td>
-                <td class="strzaly">3</td>
-                <td class="strzaly">4</td>
-                <td class="strzaly">5</td>
-                <td class="strzaly">6</td>
-                <td class="strzaly">7</td>
-                <td class="strzaly">8</td>
-                <td class="strzaly">9</td>
-                <td class="strzaly">10</td>
-                <td id="wynik">Wynik</td>
-                <td class="strzaly">10X</td>
-                <td id="uwagi">Uwagi</td>
+                <td class='strzaly'>1</td>
+                <td class='strzaly'>2</td>
+                <td class='strzaly'>3</td>
+                <td class='strzaly'>4</td>
+                <td class='strzaly'>5</td>
+                <td class='strzaly'>6</td>
+                <td class='strzaly'>7</td>
+                <td class='strzaly'>8</td>
+                <td class='strzaly'>9</td>
+                <td class='strzaly'>10</td>
+                <td id='wynik'>Wynik</td>
+                <td class='strzaly'>10X</td>
+                <td id='uwagi'>Uwagi</td>
             </tr>
 
             <tr>
                 <td></td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
                 <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
                 <td></td>
-                <td rowspan="4"></td>
+                <td rowspan='4'></td>
                
             </tr>
 
             <tr>
                 <td></td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
                 <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
                 <td></td>
             </tr>
 
             <tr>
                 <td></td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
                 <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
                 <td></td>
             </tr>
 
             <tr>
                 <td></td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
-                <td id="bron">
-                    <div id="polowa1"></div>
-                    <div id="polowa2"></div>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id="lewy"></td>
+                            <td id="prawy"></td>
+                        </tr>
+                    </table>
                 </td>
                 <td></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
-                <td class="strzaly"></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
                 <td></td>
             </tr>
         </table>
 
         <table >
-            <tr class="margtop"></tr>
+            <tr class='margtop'></tr>
             <tr>
-                <td class="bezramek">Podpis zawodnika</td>
-                <td class="dane2tab"></td>
-                <td id="odstep2"></td>
-                <td class="bezramek">Podpis sędziego</td>
-                <td class="dane2tab"></td>
+                <td class='bezramek'>Podpis zawodnika</td>
+                <td class='dane2tab'></td>
+                <td id='odstep2'></td>
+                <td class='bezramek'>Podpis sędziego</td>
+                <td class='dane2tab'></td>
             </tr>
           
         </table>
 
         <table >
             <tr>
-                <td class="bezramek"></td>
-                <td class="bezramek" rowspan="3" id="rodoTekst">Po zapoznaniu się z regulaminem zawodów wyrażam zgodę na przetwarzanie moich danych osobowych podanych przeze mnie zgodnie <br>
+                <td class='bezramek'></td>
+                <td class='bezramek' rowspan='3' id='rodoTekst'>Po zapoznaniu się z regulaminem zawodów wyrażam zgodę na przetwarzanie moich danych osobowych podanych przeze mnie zgodnie <br>
                     z art. 6 ust. 1 lit. a. Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób <br>
                      fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych w związku z udziałem w zawodach.</td>
             </tr>
             <tr>        
-                <td id="rodo"></td>
+                <td id='rodo'></td>
             </tr>
             <tr>
-                <td class="bezramek"></td>
+                <td class='bezramek'></td>
             </tr>
         </table>
 
