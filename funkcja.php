@@ -1,6 +1,8 @@
 <?php
-//$imie, $nazwisko, $klub, $ksp, $kcz, $kczOP, $psp, $pcz, $strzelbaST, $strzelbaOPEN
-function pies() : string {
+
+function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W, $konk2K, $konk3, $konk3W, $konk3K, $konk4, $konk4W, $konk4K, $nr) : string {
+    
+    $data = date('d.m.20y');
     return "
     <!DOCTYPE html>
 <html lang='en'>
@@ -13,180 +15,180 @@ function pies() : string {
 </head>
 
 <style>
-@page{
-margin: 0;
-margin-top: 5px;
-}
-    td {
-        border: 1px solid black;
-    }
-    #ramka{
-        height: 90mm;
-        width: 183mm;
-        border: 2px solid black;
-        padding-left: 2mm;
-        padding-right: 0mm;
-        margin: auto;
-    }
-
-    .dane1tab{
-        width: 152.5mm;
-        height: 4mm;
-    }
-
-    #numer{
-        width: 14mm;
-        height: 14mm;
-        text-align: center;
-    }
-
-    .strzaly, div{
-        width: 6mm;
-        height: 6mm;
-        text-align: center;
-        font-size: 3mm;
-    }
-
-    #uwagi{
-        width: 26mm;
-        text-align: center;
-    }
-
-    #odstep1{
-        width: 40mm;
-        border: none;
-    }
-
-    .dane2tab{
-        width: 43mm;
-        height: 4mm;
-    }
-
-    .dane0tab{
-        width: 73mm;
-        height: 4mm;
-    }
-
-    #broniammo{
-        width: 18mm; 
-        text-align: center;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    
-    #odstep2{
-        width: 20mm;
-        border: none;
-    }
-
-    #rodo{
-        width: 3mm;
-        height: 3mm;
-    }
-
-    .bezramek{
-        border:none;
-        font-size: 2mm;
-        text-align: left;
-    }
-
-    .margtop{
-        border: none;
-        height: 2mm;
-    }
-
-    #duzytab{
-        border-collapse: collapse;
-        width: 170mm;
-        height: 36mm;
-    }
-    
-    table{
-        margin-top: 1mm;
-    }
-
-    #wynik{
-        width: 18mm;
-        text-align: center;
-    }
-
-
-    h2{
-        text-align: center;
-    }
-
-    #bron {
-        width: 18mm; 
-        text-align: center;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    #tytul {
-        text-align: center;
-    }
-
-    #rodoTekst {
-        padding-left: 2mm;
-        box-sizing: border-box;
-        font-size: 2.5mm;
-    }
-
-    body{
-        font-size: xx-small;
-    }
-    #brontab {
-        margin-top: 0;
-        border: 0;
-        border-collapse: collapse;
-        height: 8mm;
-        width: 18mm;    
-        table-layout: fixed;
-    }
-    #gora {
-        height: 4mm;
-        width: 18mm;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        font-size: x-small;
-    }
-    #dol1 {
-        border-left: none;
-    }
-    #dol2 {
-        border-right: none;
-    }
-    #dol1, #dol2 {
-        width: 9mm;
-        height: 4mm;
-        border-bottom: none;
-        box-sizing: border-box;
-        font-size: 2mm;
-        padding: 0;
-    }
-    #zaznaczanie {
+        @page{
         margin: 0;
-        border: 0;
-        border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
-    }
-    #lewy, #prawy {
-        width: 9mm;
-        height: 7mm;
-        border-top: none;
-        border-bottom: none;
-        box-sizing: border-box;
-        padding: 0;
-    }
-    #lewy {
-        border-left: none;
-    }
-    #prawy {
-        border-right: none;
-    }
+        margin-top: 5px;
+        }
+            td {
+                border: 1px solid black;
+            }
+            #ramka{
+                height: 90mm;
+                width: 183mm;
+                border: 2px solid black;
+                padding-left: 2mm;
+                padding-right: 0mm;
+                margin: auto;
+            }
+
+            .dane1tab{
+                width: 152.5mm;
+                height: 4mm;
+            }
+
+            #numer{
+                width: 14mm;
+                height: 14mm;
+                text-align: center;
+            }
+
+            .strzaly, div{
+                width: 6mm;
+                height: 6mm;
+                text-align: center;
+                font-size: 3mm;
+            }
+
+            #uwagi{
+                width: 26mm;
+                text-align: center;
+            }
+
+            #odstep1{
+                width: 40mm;
+                border: none;
+            }
+
+            .dane2tab{
+                width: 43mm;
+                height: 4mm;
+            }
+
+            .dane0tab{
+                width: 73mm;
+                height: 4mm;
+            }
+
+            #broniammo{
+                width: 18mm; 
+                text-align: center;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            
+            #odstep2{
+                width: 20mm;
+                border: none;
+            }
+
+            #rodo{
+                width: 3mm;
+                height: 3mm;
+            }
+
+            .bezramek{
+                border:none;
+                font-size: 2mm;
+                text-align: left;
+            }
+
+            .margtop{
+                border: none;
+                height: 2mm;
+            }
+
+            #duzytab{
+                border-collapse: collapse;
+                width: 170mm;
+                height: 36mm;
+            }
+            
+            table{
+                margin-top: 1mm;             
+            }
+
+            #wynik{
+                width: 18mm;
+                text-align: center;
+            }
+
+
+            h2{
+                text-align: center;
+            }
+
+            #bron {
+                width: 18mm; 
+                text-align: center;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            #tytul {
+                text-align: center;
+            }
+
+            #rodoTekst {
+                padding-left: 2mm;
+                box-sizing: border-box;
+                font-size: 2.5mm;
+            }
+
+            body{
+                font-size: xx-small;
+            }
+            #brontab {
+                margin-top: 0;
+                border: 0;
+                border-collapse: collapse;
+                height: 8mm;
+                width: 18mm;    
+                table-layout: fixed;
+            }
+            #gora {
+                height: 4mm;
+                width: 18mm;
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                font-size: x-small;
+            }
+            #dol1 {
+                border-left: none;
+            }
+            #dol2 {
+                border-right: none;
+            }
+            #dol1, #dol2 {
+                width: 9mm;
+                height: 4mm;
+                border-bottom: none;
+                box-sizing: border-box;
+                font-size: 2mm;
+                padding: 0;
+            }
+            #zaznaczanie {
+                margin: 0;
+                border: 0;
+                border-collapse: collapse;
+                width: 100%;
+                table-layout: fixed;
+            }
+            #lewy, #prawy {
+                width: 9mm;
+                height: 7mm;
+                border-top: none;
+                border-bottom: none;
+                box-sizing: border-box;
+                padding: 0;
+            }
+            #lewy {
+                border-left: none;
+            }
+            #prawy {
+                border-right: none;
+            }
 
 </style>
 
@@ -196,22 +198,22 @@ margin-top: 5px;
     <div id='ramka'>
 
         
-        <table >
+        <table style='overflow: wrap' autosize='0'>
             <tr>
-                <td id='numer'>000</td>
+                <td id='numer'>$nr</td>
                 <td id='tytul' class='bezramek' colspan='3'><h2>KSS LOK REGALICA GRYFINO</h2></td>
             </tr>
             <tr>
                 
                 
                 <td class='bezramek'>IMIE</td>
-                <td class='dane1tab'></td>
+                <td class='dane1tab'>$imie</td>
             </tr>
 
             <tr>
                 
                 <td class='bezramek'>NAZWISKO</td>
-                <td class='dane1tab'></td>
+                <td class='dane1tab'>$nazwisko</td>
             </tr>
         </table>
 
@@ -219,10 +221,10 @@ margin-top: 5px;
             <tr class='margtop'></tr>
             <tr>
                 <td class='bezramek'>Klub</td>
-                <td class='dane0tab'></td>
+                <td class='dane0tab'>$klub</td>
                 <td id='odstep1'></td>
                 <td class='bezramek'>Data</td>
-                <td class='dane2tab'></td>
+                <td class='dane2tab'>$data</td>
             </tr>
             <tr class='margtop'></tr>
         </table>
@@ -234,7 +236,7 @@ margin-top: 5px;
                 <td id='broniammo'>
                     <table id='brontab'>
                         <tr>
-                            <td id='gora' colspan='2'>Broń</td>
+                            <td id='gora' colspan='2'>Broń i amunicja</td>
                         </tr>
                         <tr>
                             <td id='dol1'>Własna</td>
@@ -243,17 +245,6 @@ margin-top: 5px;
                     </table>
                     </div>
 
-                </td>
-                <td id='broniammo'>
-                    <table id='brontab'>
-                        <tr>
-                            <td id='gora' colspan='2'>Amunicja</td>
-                        </tr>
-                        <tr>
-                            <td id='dol1'>Własna</td>
-                            <td id='dol2'>Klubowa</td>
-                        </tr>
-                    </table>
                 </td>
                 <td>Stanowisko</td>
                 <td class='strzaly'>1</td>
@@ -272,20 +263,12 @@ margin-top: 5px;
             </tr>
 
             <tr>
-                <td></td>
+                <td>$konk1</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
-                        </tr>
-                    </table>
-                </td>
-                <td id='bron'>
-                    <table id='zaznaczanie'>
-                        <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
+                            <td id='lewy'>$konk1W</td>
+                            <td id='prawy'>$konk1K</td>
                         </tr>
                     </table>
                 </td>
@@ -307,20 +290,12 @@ margin-top: 5px;
             </tr>
 
             <tr>
-                <td></td>
+                <td>$konk2</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
-                        </tr>
-                    </table>
-                </td>
-                <td id='bron'>
-                    <table id='zaznaczanie'>
-                        <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
+                            <td id='lewy'>$konk2W</td>
+                            <td id='prawy'>$konk2K</td>
                         </tr>
                     </table>
                 </td>
@@ -340,20 +315,12 @@ margin-top: 5px;
             </tr>
 
             <tr>
-                <td></td>
+                <td>$konk3</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
-                        </tr>
-                    </table>
-                </td>
-                <td id='bron'>
-                    <table id='zaznaczanie'>
-                        <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
+                            <td id='lewy'>$konk3W</td>
+                            <td id='prawy'>$konk3K</td>
                         </tr>
                     </table>
                 </td>
@@ -373,20 +340,12 @@ margin-top: 5px;
             </tr>
 
             <tr>
-                <td></td>
+                <td>$konk4</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
-                        </tr>
-                    </table>
-                </td>
-                <td id='bron'>
-                    <table id='zaznaczanie'>
-                        <tr>
-                            <td id='lewy'></td>
-                            <td id='prawy'></td>
+                            <td id='lewy'>$konk4W</td>
+                            <td id='prawy'>$konk4K</td>
                         </tr>
                     </table>
                 </td>
