@@ -136,7 +136,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             }
 
             body{
-                font-size: xx-small;
+                font-size: 6pt;
             }
             #brontab {
                 margin-top: 0;
@@ -152,7 +152,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 border-left: none;
                 border-right: none;
                 border-top: none;
-                font-size: x-small;
+                font-size: 6pt;
             }
             #dol1 {
                 border-left: none;

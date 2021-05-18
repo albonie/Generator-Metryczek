@@ -158,11 +158,20 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
                 }
             
             $mpdf->shrink_tables_to_fit=1;
-            $mpdf->AddPage();
-            $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $kb, $kbW, $kbK, $kc, $kcW, $kcK,  $kco, $kcoW, $kcoK, null, null, null, $j));
-            $mpdf->WriteHTML("<br><br><br>");
-            $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $pb, $pbW, $pbK, $pc, $pcW, $pcK, $ss, $ssW, $ssK, $so, $soW, $soK, $j));
-    }
+            if ($j+1 %3 == 0) {
+                $mpdf->AddPage();
+            }
+            
+            if ($kb != " " || $kc != " " || $kco != " ") {
+                $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $kb, $kbW, $kbK, $kc, $kcW, $kcK,  $kco, $kcoW, $kcoK, null, null, null, $j));
+                $mpdf->WriteHTML("<br><br>");
+            }
+            
+            if ($pb != " " || $pc != " " || $ss != " " || $so != " ") {
+                $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $pb, $pbW, $pbK, $pc, $pcW, $pcK, $ss, $ssW, $ssK, $so, $soW, $soK, $j));
+                $mpdf->WriteHTML("<br><br>");
+            }
+        }
 }
 $mpdf->Output();
 ?>
