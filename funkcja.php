@@ -17,7 +17,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
 <style>
         @page{
         margin: 0;
-        margin-top: 5px;
+        margin-top: 55px;
         }
             td {
                 border: 1px solid black;
@@ -29,17 +29,21 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 padding-left: 2mm;
                 padding-right: 0mm;
                 margin: auto;
+                margin-bottom: 0;
             }
 
             .dane1tab{
                 width: 152.5mm;
-                height: 4mm;
+                height: 10mm;
+                padding-left: 3mm;
+                font-size: 15pt;
             }
 
             #numer{
-                width: 14mm;
+                width: 20mm;
                 height: 14mm;
                 text-align: center;
+                font-size: 20pt;
             }
 
             .strzaly, div{
@@ -61,12 +65,16 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
 
             .dane2tab{
                 width: 43mm;
-                height: 4mm;
+                height: 10mm;
+                padding-left: 3mm;
+                font-size: 15pt;
             }
 
             .dane0tab{
                 width: 73mm;
-                height: 4mm;
+                height: 10mm;
+                padding-left: 3mm;
+                font-size: 15pt;
             }
 
             #broniammo{
@@ -89,7 +97,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
 
             .bezramek{
                 border:none;
-                font-size: 2mm;
+                font-size: 9pt;
                 text-align: left;
             }
 
@@ -136,7 +144,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             }
 
             body{
-                font-size: 6pt;
+                font-size: 10pt;
             }
             #brontab {
                 margin-top: 0;
@@ -177,7 +185,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             }
             #lewy, #prawy {
                 width: 9mm;
-                height: 7mm;
+                height: 9mm;
                 border-top: none;
                 border-bottom: none;
                 box-sizing: border-box;
@@ -188,6 +196,9 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             }
             #prawy {
                 border-right: none;
+            }
+            .konkurencja {
+                text-align: 0;
             }
 
 </style>
@@ -200,19 +211,19 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
         
         <table style='overflow: wrap' autosize='0'>
             <tr>
-                <td id='numer'>$nr</td>
+                <td id='numer'><strong>$nr</strong></td>
                 <td id='tytul' class='bezramek' colspan='3'><h2>KSS LOK REGALICA GRYFINO</h2></td>
             </tr>
             <tr>
                 
                 
-                <td class='bezramek'>IMIE</td>
+                <td class='bezramek'><strong>IMIE</strong></td>
                 <td class='dane1tab'>$imie</td>
             </tr>
 
             <tr>
                 
-                <td class='bezramek'>NAZWISKO</td>
+                <td class='bezramek'><strong>NAZWISKO</strong></td>
                 <td class='dane1tab'>$nazwisko</td>
             </tr>
         </table>
@@ -220,10 +231,10 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
         <table>
             <tr class='margtop'></tr>
             <tr>
-                <td class='bezramek'>Klub</td>
+                <td class='bezramek'><strong>Klub</strong></td>
                 <td class='dane0tab'>$klub</td>
                 <td id='odstep1'></td>
-                <td class='bezramek'>Data</td>
+                <td class='bezramek'><strong>Data</strong></td>
                 <td class='dane2tab'>$data</td>
             </tr>
             <tr class='margtop'></tr>
@@ -263,7 +274,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             </tr>
 
             <tr>
-                <td>$konk1</td>
+                <td class='konkurencja'>$konk1</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
@@ -285,12 +296,12 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 <td class='strzaly'></td>
                 <td class='strzaly'></td>
                 <td></td>
-                <td rowspan='4'></td>
+                <td></td>
                
             </tr>
 
             <tr>
-                <td>$konk2</td>
+                <td class='konkurencja'>$konk2</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
@@ -312,10 +323,11 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 <td class='strzaly'></td>
                 <td class='strzaly'></td>
                 <td></td>
+                <td></td>
             </tr>
 
             <tr>
-                <td>$konk3</td>
+                <td class='konkurencja'>$konk3</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
@@ -337,10 +349,11 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 <td class='strzaly'></td>
                 <td class='strzaly'></td>
                 <td></td>
+                <td></td>
             </tr>
 
             <tr>
-                <td>$konk4</td>
+                <td class='konkurencja'>$konk4</td>
                 <td id='bron'>
                     <table id='zaznaczanie'>
                         <tr>
@@ -361,6 +374,33 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 <td class='strzaly'></td>
                 <td class='strzaly'></td>
                 <td class='strzaly'></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class='konkurencja'>$konk4</td>
+                <td id='bron'>
+                    <table id='zaznaczanie'>
+                        <tr>
+                            <td id='lewy'>$konk4W</td>
+                            <td id='prawy'>$konk4K</td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td class='strzaly'></td>
+                <td></td>
                 <td></td>
             </tr>
         </table>

@@ -28,7 +28,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $kc=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($kc != "Nie") {
-                    if ($kc != "Tak, broń i amunicja własna") {
+                    if ($kc == "Tak, broń i amunicja własna") {
                         $kcW = "X";
                         $kcK = " ";
                     }
@@ -47,7 +47,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $kco=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($kco != "Nie") {
-                    if ($kco != "Tak, broń i amunicja własna") {
+                    if ($kco == "Tak, broń i amunicja własna") {
                         $kcoW = "X";
                         $kcoK = " ";
                     }
@@ -66,7 +66,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $ss=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($ss != "Nie") {
-                    if ($ss != "Tak, broń i amunicja własna") {
+                    if ($ss == "Tak, broń i amunicja własna") {
                         $ssW = "X";
                         $ssK = " ";
                     }
@@ -85,7 +85,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $so=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($so != "Nie") {
-                    if ($so != "Tak, broń i amunicja własna") {
+                    if ($so == "Tak, broń i amunicja własna") {
                         $soW = "X";
                         $soK = " ";
                     }
@@ -104,7 +104,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $kb=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($kb != "Nie") {
-                    if ($kb != "Tak, broń i amunicja własna") {
+                    if ($kb == "Tak, broń i amunicja własna") {
                         $kbW = "X";
                         $kbK = " ";
                     }
@@ -123,7 +123,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
             $pb=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 $i++;
                 if ($pb != "Nie") {
-                    if ($pb != "Tak, broń i amunicja własna") {
+                    if ($pb == "Tak, broń i amunicja własna") {
                         $pbW = "X";
                         $pbK = " ";
                     }
@@ -141,7 +141,7 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
 
             $pc=( ! empty( $r[ $i] ) ? $r[ $i] : '-');
                 if ($pc != "Nie") {
-                    if ($pc != "Tak, broń i amunicja własna") {
+                    if ($pc == "Tak, broń i amunicja własna") {
                         $pcW = "X";
                         $pcK = " ";
                     }
@@ -158,18 +158,20 @@ if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
                 }
             
             $mpdf->shrink_tables_to_fit=1;
-            if ($j+1 %3 == 0) {
-                $mpdf->AddPage();
+            
+            if ($j + 1 % 2 == 0) {
+            $mpdf->AddPage();
             }
+            
             
             if ($kb != " " || $kc != " " || $kco != " ") {
                 $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $kb, $kbW, $kbK, $kc, $kcW, $kcK,  $kco, $kcoW, $kcoK, null, null, null, $j));
-                $mpdf->WriteHTML("<br><br>");
+                $mpdf->WriteHTML("<hr><br><br>");
             }
             
             if ($pb != " " || $pc != " " || $ss != " " || $so != " ") {
                 $mpdf->WriteHTML(pies($nazwisko, $imie, $klub, $pb, $pbW, $pbK, $pc, $pcW, $pcK, $ss, $ssW, $ssK, $so, $soW, $soK, $j));
-                $mpdf->WriteHTML("<br><br>");
+                $mpdf->WriteHTML("<hr><br><br>");
             }
         }
 }
