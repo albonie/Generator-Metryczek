@@ -2,61 +2,20 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <link rel='stylesheet' href='styles.css'>
-    <script>
-        function  limiter(j) {
-            var licznik = 0;
-            for (let i = 0; i < 8; i++) {
-                if (document.getElementsByClassName('konkur')[i].checked) {
-                    licznik++;
-                }             
-            }
-            if (licznik > 4) document.getElementsByClassName('konkur')[j].checked = false;
-            return false;
-        }
-    </script>
+    <link rel='stylesheet' href='styles.css'>    
 </head>
 <body>
-<form method='POST' class='form' name='form' id='form' action='metryczka.php'>
-    <p>Podaj imię i nazwisko: </p>
-    <input type='text' name='dane' id='dane'><br>
-    <p>Podaj klub:</p>
-    <input type='text' name='klub' id='klub'><br>
-    <hr>
-    <p>Wybierz konkurencje:</p>
-    <input type='checkbox' class='konkur' name='ksp' onclick='limiter(0)' id='konkur'>
-    <label for='ksp'>Karabin sportowy</label><br>
-
-    <input type='checkbox' class='konkur' name='kcz' onclick='limiter(1)' id='konkur'>
-    <label for='kcz'>Karabin centralnego zapłonu</label><br>
-
-    <input type='checkbox' class='konkur' name='kczOP' onclick='limiter(2)' id='konkur'>
-    <label for='kczOP'>Karabin centralnego zapłonu OPEN</label><br>
-
-    <input type='checkbox' class='konkur' name='optyka' onclick='limiter(3)' id='konkur'>
-    <label for='optyka'>Optyka</label><br>
-
-    <input type='checkbox' class='konkur' name='psp' onclick='limiter(4)' id='konkur'>
-    <label for='psp'>Pistolet sportowy</label><br>
-
-    <input type='checkbox' class='konkur' name='pcz' onclick='limiter(5)' id='konkur'>
-    <label for='pcz'>Pistolet centralnego zapłonu</label><br>
-
-    <input type='checkbox' class='konkur' name='strzST' onclick='limiter(6)' id='konkur'>
-    <label for='strzST'>Strzelba STANDARD</label><br>
-
-    <input type='checkbox' class='konkur' name='strzOP' onclick='limiter(7)' id='konkur'>
-    <label for='strzOP'>Strzelba OPEN</label><br>
-    <hr>
-
-    <p>Akceptuje RODO:</p>
-    <input type="checkbox" name="rodo"> TAK
-
-    <hr>
-    <input type='submit' value='Generuj'>
     
-</form>
-
+    <form method="post" action="generator.php" enctype="multipart/form-data">
+        <p>Podaj date na pierwszy dzień zawodów (DD.MM.YYYY)</p>
+        <input type="text" name="pole1"><br>
+        <p>Podaj date na drugi dzień zawodów (DD.MM.YYYY)</p>
+        <input type="text" name="pole2"><br><br>
+        <p>Wybierz plik z danymi do metryczek (akceptowane są tylko pliki .xlsx (MS Excel)</p>
+        <input type="file" name="upload" accept=".xlsx">
+        <input type="submit" value="Generuj">
+    </form>
+    
 </body>
 </html>
 

@@ -1,6 +1,6 @@
 <?php
 
-function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W, $konk2K, $konk3, $konk3W, $konk3K, $konk4, $konk4W, $konk4K, $nr) : string {
+function metryczka4($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W, $konk2K, $konk3, $konk3W, $konk3K, $konk4, $konk4W, $konk4K, $nr) : string {
     
     $data = date('d.m.20y');
     return "
@@ -217,7 +217,7 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
             <tr>
                 
                 
-                <td class='bezramek'><strong>IMIE</strong></td>
+                <td class='bezramek'><strong>IMIĘ</strong></td>
                 <td class='dane1tab'>$imie</td>
             </tr>
 
@@ -378,31 +378,6 @@ function pies($imie, $nazwisko, $klub, $konk1, $konk1W, $konk1K, $konk2, $konk2W
                 <td></td>
             </tr>
 
-            <tr>
-                <td class='konkurencja'>$konk4</td>
-                <td id='bron'>
-                    <table id='zaznaczanie'>
-                        <tr>
-                            <td id='lewy'>$konk4W</td>
-                            <td id='prawy'>$konk4K</td>
-                        </tr>
-                    </table>
-                </td>
-                <td></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td class='strzaly'></td>
-                <td></td>
-                <td></td>
-            </tr>
         </table>
 
         <table >
