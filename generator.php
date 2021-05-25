@@ -12,7 +12,7 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
         $data2 = $_POST["pole2"];
 
         if (move_uploaded_file($_FILES["upload"]["tmp_name"], "./pliki/Zawody.xlsx")){
-        if ( $xlsx = SimpleXLSX::parse('Zawody.xlsx')) {
+        if ( $xlsx = SimpleXLSX::parse('./pliki/Zawody.xlsx')) {
             $dim = $xlsx->dimension(0);
             foreach ( $xlsx->rows() as $j=>$r ) {
 
@@ -44,9 +44,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $kc = "Kcz";
                         }
                         else {
-                            $kc = " ";
-                            $kcW = " ";
-                            $kcK = " ";
+                            $kc = "Kcz";
+                            $kcW = "-";
+                            $kcK = "-";
                         }
 
                     $kco=( ! empty( $r[ $i] ) ? $r[ $i] : '-');             //  KOLUMNA H
@@ -63,9 +63,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $kco = "Kcz OPEN";
                         }
                         else {
-                            $kco = " ";
-                            $kcoW = " ";
-                            $kcoK = " ";
+                            $kco = "Kcz OPEN";
+                            $kcoW = "-";
+                            $kcoK = "-";
                         }
 
                     $ss=( ! empty( $r[ $i] ) ? $r[ $i] : '-');              //  KOLUMNA I
@@ -82,9 +82,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $ss = "Strzelba STANDARD";
                         }
                         else {
-                            $ss = " ";
-                            $ssW = " ";
-                            $ssK = " ";
+                            $ss = "Strzelba STANDARD";
+                            $ssW = "-";
+                            $ssK = "-";
                         }
 
                     $so=( ! empty( $r[ $i] ) ? $r[ $i] : '-');              //  KOLUMNA J
@@ -101,9 +101,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $so = "Strzelba OPEN";
                         }
                         else {
-                            $so = " ";
-                            $soW = " ";
-                            $soK = " ";
+                            $so = "Strzelba OPEN";
+                            $soW = "-";
+                            $soK = "-";
                         }
 
                     $kb=( ! empty( $r[ $i] ) ? $r[ $i] : '-');              //  KOLUMNA K
@@ -120,9 +120,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $kb = "Ksp";
                         }
                         else {
-                            $kb = " ";
-                            $kbW = " ";
-                            $kbK = " ";
+                            $kb = "Ksp";
+                            $kbW = "-";
+                            $kbK = "-";
                         }
 
                     $pb=( ! empty( $r[ $i] ) ? $r[ $i] : '-');              //  KOLUMNA L
@@ -139,9 +139,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $pb = "Psp";
                         }
                         else {
-                            $pb = " ";
-                            $pbW = " ";
-                            $pbK = " ";
+                            $pb = "Psp";
+                            $pbW = "-";
+                            $pbK = "-";
                         }
 
                     $pc=( ! empty( $r[ $i] ) ? $r[ $i] : '-');              //  KOLUMNA M
@@ -158,9 +158,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $pc = "Pcz";
                         }
                         else {
-                            $pc = " ";
-                            $pcW = " ";
-                            $pcK = " ";
+                            $pc = "Pcz";
+                            $pcW = "-";
+                            $pcK = "-";
                         }
 
                     $optyka=( ! empty( $r[ $i] ) ? $r[ $i] : '-');          //  KOLUMNA N
@@ -176,9 +176,9 @@ if (isset($_POST["pole1"]) && isset($_POST["pole2"]) && isset($_FILES["upload"])
                             $optyka = "Optyka";
                         }
                         else {
-                            $optyka = " ";
-                            $optykaW = " ";
-                            $optykaK = " ";
+                            $optyka = "Optyka";
+                            $optykaW = "-";
+                            $optykaK = "-";
                         }
                     
                     $mpdf->shrink_tables_to_fit=1;
